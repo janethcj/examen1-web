@@ -1,55 +1,38 @@
-//converter.php
 
 <?php
 
-  include 'app.php';
+//converter.php
 
-  //Fahrenheit a Celsius
+  include 'converter.php';
+
+  //Mililitros a Onzas Fluidas
   if (opciones==1){
-    $fah = ($numero - 32) * 5/9;
+    $mililitros =  ($numero / 29.574);
+  }
+
+  //Metros a Yardas
+  if (opciones==2){
+    $metros =  ($numero * 1.0936);
+  }
+
+  //Gramos a Libras
+  if (opciones==3){
+    $gramos =  ($numero / 454);
   }
 
   //Celsius a Fahrenheit
-  if (opciones==2){
-
-    $cel = ($numero * 9/5) + 32;
-  }
-
-  //Kilogramos a Libras
-  if (opciones==3){
-
-    $kilo = $numero * 2.2046;
-  }
-
-  //Libras a Kilogramos
   if (opciones==4){
-
-    $lib = $numero / 2.2046;
+    $celsius = ($numero * 9/5) + 32;
   }
 
-  //Litros a Galones
+  //Kilometros a Millas
+  if (opciones==4){
+    $kilometros =  ($numero / 1.609);
+  }
+
+  //Pesos a Libras Esterlinas
   if (opciones==5){
-
-    $lit = $numero / 3.785;
+    $pesos = ($numero / 26.13);
   }
-
-  //Galones a Litros
-  if (opciones==6){
-
-    $gal = $numero * 3.785;
-  }
-
-  //Centimentros a Pulgadas
-  if (opciones==7){
-
-    $cen = $numero / 2.54;
-  }
-
-  //Pulgadas a Centimentros
-  if (opciones==8){
-
-    $pul = $numero * 2.54;
-  }
-
 
 ?>

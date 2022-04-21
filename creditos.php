@@ -1,11 +1,11 @@
-//creditos.php LISTO
 
 <!doctype html>
+<!--creditos.php-->
 <html lang="en">
 
 <head>
 
-  <title> Creditos. </title>
+  <title> Creditos </title>
   <meta charset="utf-8">
 
     <style>
@@ -123,8 +123,8 @@
 
     <!-- ========== MENÚ ========== -->
     <div class="form-group col-sm-10" align="center">
-    <a class="button" href="index.html"> Inicio</a>
-    <a class="button" href="formulario.html"> Formulario</a>
+    <a class="button" href="index.php"> Inicio</a>
+    <a class="button" href="formulario.php"> Formulario</a>
     </div>
     <!-- ========== END MENÚ ========== -->
 

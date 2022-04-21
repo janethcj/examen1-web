@@ -1,31 +1,10 @@
-//formulario.php
-
-<?php
-include 'UnitConversionController.php';
-
-if ($_POST) {
-  $numero = $_POST['numero'];
-  $opciones = $_POST['opciones'];
-
-    echo "<h2> Fahrenheit ".round($fah,2)." </h2>";
-    echo "<h2> Celsius ".round($cel,2)." </h2>";
-    echo "<h2> Kilogramos ".round($kilo,2)." </h2>";
-    echo "<h2> Libras ".round($lib,2)." </h2>";
-    echo "<h2> Litros ".round($lit,2)." </h2>";
-    echo "<h2> Galones ".round($gal,2)." </h2>";
-    echo "<h2> Centimetros ".round($cen,2)." </h2>";
-    echo "<h2> Pulgadas ".round($pul,2)." </h2>";
-}
-
-
-?>
-
 <!doctype html>
+<!--formulario.php-->
 <html lang="en">
 
 <head>
 
-  <title> Convertidor de unidades entre el sistema métrico decimal y el sistema inglés. </title>
+  <title> Formulario </title>
   <meta charset="utf-8">
 
     <style>
@@ -137,37 +116,38 @@ if ($_POST) {
 </head>
 
 <body>
-    <!-- ========== HEADER ========== -->
+  <!-- ========== HEADER ========== -->
+  <div  style="background-color: #F2E5D5;">
+  </div>
 
-    <div  style="background-color: #F2E5D5;">
-    </div>
-
+  <!-- ========== MENÚ ========== -->
+  <div class="form-group col-sm-10" align="center">
+  <a class="button" href="index.php"> Inicio</a>
+  <a class="button" href="creditos.php"> Créditos</a>
+  </div>
+  <!-- ========== END MENÚ ========== -->
     <header  style="background-color: #F2E5D5;">
-      <h1 class="img"> Convertidor de unidades entre el sistema métrico decimal y el sistema inglés. </h1>
+      <h1 class="img"> Formulario </h1>
     </header>
     <!-- ========== END HEADER ========== -->
 
     <!-- ============ MAIN ============ -->
     <div align="center">
       <h2>Selecciona una unidad de conversión</h2>
-    <!--<button class="button" name="js" value="js" onclick="location.href='app.js'">JavaScript</button>
-    <button class="button" name="php" value="php" onclick="location.href='app.php'">PHP</button>-->
     </div>
 
     <section>
             <!--FORMULARIO-->
-            <form role="form" action="app.php" method="POST">
+            <form role="form" action="converter.php" method="POST">
             <div>
               <select name="opciones"class="form-control" text-align="center">
               <option selected>Selecciona una opción...</option>
-                <option value="1">Fahrenheit a Celsius</option>
-                <option value="2">Celsius a Fahrenheit</option>
-                <option value="3">Kilogramos a Libras</option>
-                <option value="4">Libras a Kilogramos</option>
-                <option value="5">Litros a Galones</option>
-                <option value="6">Galones a Litros</option>
-                <option value="7">Centimentros a Pulgadas</option>
-                <option value="8">Pulgadas a Centimentros</option>
+                <option value="1">Mililitros a Onzas Fluidas</option>
+                <option value="2">Metros a Yardas</option>
+                <option value="3">Gramos a Libras</option>
+                <option value="4">Celsius a Fahrenheit</option>
+                <option value="5">Kilometros a Millas</option>
+                <option value="6">Pesos a Libras Esterlinas</option>
               </select>
             </div>
 
@@ -180,12 +160,30 @@ if ($_POST) {
 
 
             <div class="form-group col-sm-10" align="center">
-            <button class="button" id="calcularphp" type="submit" name="calcular" value="calcularjs" onclick="app.js">Calcular con JavaScript</button>
-            <button class="button" id="calcularjs" type="submit" name="calcular" value="calcularphp" onclick="app.php">Calcular con PHP</button>
+            <button class="button" id="converterphp" type="submit" name="converter" value="converter" onclick="converter.php">Convertir</button>
             </div><!-- enviar datos del formulario -->
 
             </form><!--FIN FORMULARIO-->
     </section><!--section-->
+
+
+    <?php
+    include 'converter.php';
+
+    if ($_POST) {
+      $numero = $_POST['numero'];
+      $opciones = $_POST['opciones'];
+
+        echo "<h2> Mililitros a Onzas Fluidas ".round($mililitros,2)." </h2>";
+        echo "<h2> Metros a Yardas ".round($metros,2)." </h2>";
+        echo "<h2> Gramos a Libras ".round($gramos,2)." </h2>";
+        echo "<h2> Celsius a Fahrenheit ".round($celsius,2)." </h2>";
+        echo "<h2> Kilometros a Millas ".round($kilometros,2)." </h2>";
+        echo "<h2> Pesos a Libras Esterlinas ".round($pesos,2)." </h2>";
+    }
+
+
+    ?>
 
 
 </body>

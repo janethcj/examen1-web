@@ -1,6 +1,5 @@
-//index.php LISTO
-
 <!doctype html>
+<!--index.php-->
 <html lang="en">
 
 <head>
@@ -123,8 +122,8 @@
 
     <!-- ========== MENÚ ========== -->
     <div class="form-group col-sm-10" align="center">
-    <a class="button" href="formulario.html"> Formulario</a>
-    <a class="button" href="creditos.html"> Créditos</a>
+    <a class="button" href="formulario.php"> Formulario</a>
+    <a class="button" href="creditos.php"> Créditos</a>
     </div>
     <!-- ========== END MENÚ ========== -->
 
