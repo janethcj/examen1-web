@@ -167,24 +167,5 @@
     </section><!--section-->
 
 
-    <?php
-    include 'converter.php';
-
-    if ($_POST) {
-      $numero = $_POST['numero'];
-      $opciones = $_POST['opciones'];
-
-        echo "<h2> Mililitros a Onzas Fluidas ".round($mililitros,2)." </h2>";
-        echo "<h2> Metros a Yardas ".round($metros,2)." </h2>";
-        echo "<h2> Gramos a Libras ".round($gramos,2)." </h2>";
-        echo "<h2> Celsius a Fahrenheit ".round($celsius,2)." </h2>";
-        echo "<h2> Kilometros a Millas ".round($kilometros,2)." </h2>";
-        echo "<h2> Pesos a Libras Esterlinas ".round($pesos,2)." </h2>";
-    }
-
-
-    ?>
-
-
 </body>
 <html>
